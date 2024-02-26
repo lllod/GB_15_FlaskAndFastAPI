@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ super() }} - {{ 'Результат подсчета' }}
+{% endblock %}
+
+{% block container %}
+    {% if result %}
+        <label for="exampleFormControlTextarea1">Количество символов в веденном тексте:</label>
+        <input class="form-control" type="text" placeholder="{{ result }}" readonly>
+    {% endif %}
+{% endblock %}
